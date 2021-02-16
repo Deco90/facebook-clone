@@ -1,0 +1,11 @@
+{
+    "liveServer.settings.port": 5501
+    "emmet.includeLanguages": {
+    "blade": "php",
+    "javascript": "javascriptreact",
+    "vue": "html",
+    "vue-html": "html"
+  },
+  "emmet.showAbbreviationSuggestions": false,
+  "emmet.triggerExpansionOnTab": true,
+}
