@@ -2,19 +2,29 @@ import React from "react";
 import "./App.css";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
-import SideBarRow from "./SidebarRow";
 import Feed from "./Feed";
+import Login from "./Login";
+import "./App.css";
+import Widgets from "./Widgets";
+import { useStateValue } from "./StateProvider";
 
 function App() {
+  const [{ user }, dispatch] = useStateValue();
+
   return (
     <div className="app">
-      <Header />
-      <div className="app__body">
-        <Sidebar />
-        <Feed />
-
-        {/* widget */}
-      </div>
+      {!user ? (
+        <Login />
+      ) : (
+        <>
+          <Header />
+          <div className="app__body">
+            <Sidebar />
+            <Feed />
+            <Widgets />
+          </div>
+        </>
+      )}
     </div>
   );
 }
